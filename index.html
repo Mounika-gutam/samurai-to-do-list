@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h1 class="main-title">Task Management</h1>
+            <div class="container">
+                <div class="sidebar">
+                    <div class="task-summary">
+                        <div class="expired-tasks">
+                            <h3 class="title-exp">Expired Tasks</h3>
+                            <p id="expired-count">5</p>
+                        </div>
+                        <div class="all-active-tasks">
+                            <h3 class="title-act">All Active Tasks</h3>
+                            <p id="active-count">7</p>
+                        </div>
+                        <div class="completed-tasks">
+                            <h3 class="title-com">Completed Tasks</h3>
+                            <p id="completed-count">2/7</p>
+                        </div>
+                        <button id="add-task-btn">+ Add Task</button>
+                    </div>
+                </div>
+                <div class="main-content">
+                    <div class="task-column to-do">
+                        <h3>To Do <span id="todo-count">3</span></h3>
+                        <div class="task-list" id="todo-list">
+                            <!-- Dummy To Do Tasks -->
+                            <div class="task-item low">
+                                <p><strong>Brainstorming</strong></p>
+                                <p>Deadline: 12/5/24</p>
+                                <p>Priority: Low</p>
+                            </div>
+                            <div class="task-item high">
+                                <p><strong>Research</strong></p>
+                                <p>Deadline: 12/5/24</p>
+                                <p>Priority: High</p>
+                            </div>
+                            <div class="task-item high">
+                                <p><strong>Wireframes</strong></p>
+                                <p>Deadline: 12/5/24</p>
+                                <p>Priority: High</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="task-column on-progress">
+                        <h3>On Progress <span id="progress-count">2</span></h3>
+                        <div class="task-list" id="progress-list">
+                            <!-- Dummy On Progress Tasks -->
+                            <div class="task-item low">
+                                <p><strong>Onboarding Illustrations</strong></p>
+                                <p>Deadline: 12/5/24</p>
+                                <p>Priority: Low</p>
+                            </div>
+                            <div class="task-item low">
+                                <p><strong>Moodboard</strong></p>
+                                <p>Deadline: 12/5/24</p>
+                                <p>Priority: Low</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="task-column done">
+                        <h3>Done <span id="done-count">2</span></h3>
+                        <div class="task-list" id="done-list">
+                            <!-- Dummy Done Tasks -->
+                            <div class="task-item low">
+                                <p><strong>Mobile App Design</strong></p>
+                                <p>Deadline: 12/5/24</p>
+                                <p>Priority: Low</p>
+                            </div>
+                            <div class="task-item low">
+                                <p><strong>Design System</strong></p>
+                                <p>Deadline: 12/5/24</p>
+                                <p>Priority: Low</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Task Modal for adding a new task -->
+            <div id="task-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close-btn">&times;</span>
+                    <h2 class="modal-title">Add Task</h2>
+                    <form id="task-form">
+                        <label for="task-title" class="form-label">Task Title:</label>
+                        <input type="text" id="task-title" class="form-input" required>
+
+                        <label for="task-category" class="form-label">Category:</label>
+                        <select id="task-category" class="form-input" required>
+                            <option value="todo">To Do</option>
+                            <option value="progress">On Progress</option>
+                            <option value="done">Done</option>
+                        </select>
+
+                        <label for="task-deadline" class="form-label">Deadline:</label>
+                        <input type="date" id="task-deadline" class="form-input" required>
+
+                        <label for="task-priority" class="form-label">Priority:</label>
+                        <select id="task-priority" class="form-input" required>
+                            <option value="low">Low</option>
+                            <option value="high">High</option>
+                        </select>
+
+                        <button type="submit" class="add-task-btn">Add Task</button>
+                    </form>
+                </div>
+                </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
